@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "kfone": {
+      "type": "object",
+      "properties": {
+        "github_new_release_to_twitter_post": {
+          "type": "object",
+          "properties": {
+            "gitHubListenerConfig": {
+              "type": "object",
+              "properties": {
+                "webhookSecret": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "webhookSecret"
+              ],
+              "name": "ballerinax/trigger.github:0.8.1:ListenerConfig",
+              "description": ""
+            },
+            "twitterClientConfig": {
+              "type": "object",
+              "properties": {
+                "apiKey": {
+                  "type": "string"
+                },
+                "apiSecret": {
+                  "type": "string"
+                },
+                "accessToken": {
+                  "type": "string"
+                },
+                "accessTokenSecret": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "apiKey",
+                "apiSecret",
+                "accessToken",
+                "accessTokenSecret"
+              ],
+              "name": "kfone/github_new_release_to_twitter_post:3.1.0:TwitterClientConfig",
+              "description": ""
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "gitHubListenerConfig",
+            "twitterClientConfig"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
